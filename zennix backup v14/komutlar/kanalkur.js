@@ -76,7 +76,7 @@ let newChannel;
       for (let index = 0; index < kanaldata.writes.length; index++) {
         const kanalveri = kanaldata.writes[index];
         newOverwrite.push({
-          id: veri.id,
+          id: kanalveri.id,
           allow: new PermissionsBitField(kanalveri.allow).toArray(),
           deny: new PermissionsBitField(kanalveri.deny).toArray()
         });
