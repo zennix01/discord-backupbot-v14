@@ -40,13 +40,13 @@ const zennix = global.client = new Client({
     const { YamlDatabase } = require('five.db');
     const db = global.db = new YamlDatabase();
 
-zennix.on(Events.ClientReady,async () => {
+/*/zennix.on(Events.ClientReady,async () => {
     let channel = zennix.guilds.cache.get(zxayar.sunucuıd).channels.cache.get(zxayar.botseskanali)
     joinVoiceChannel({channelId: channel.id,guildId: channel.guild.id,adapterCreator: channel.guild.voiceAdapterCreator,group: zennix.user.id,
     selfDeaf:true,selfMute:true
               });
             })
-
+/*/  BOT SES BENCE AÇMAYIN
 
 const webHook = new WebhookClient({ url: zxayar.webhookurl });
 async function kanalsend(message, entry) {
@@ -83,7 +83,7 @@ const komutlar = args.shift().toLowerCase();
 const cmd = zennix.komutlar.get(komutlar) || [...zennix.komutlar.values()].find((e) => e.aliases && e.aliases.includes(komutlar));
  const zxembed = new EmbedBuilder().setColor(`#2f3136`)
 .setAuthor({ name: message.member.displayName, iconURL: message.author.avatarURL({ dynamic: true, size: 2048 }) })
-.setFooter({ text: zxayar && zxayar.presence.length > 0 ? zxayar.presence : "Zx Was Here", iconURL: message.author.avatarURL({ dynamic: true, size: 2048 }) })
+.setFooter({ text: zxayar && zxayar.presence.length > 0 ? zxayar.presence : "Zennix Was Here", iconURL: message.author.avatarURL({ dynamic: true, size: 2048 }) })
 if (cmd) {cmd.execute(zennix, message, args, zxembed);}})
 
 setInterval(async () => {
@@ -94,7 +94,7 @@ let guild = zennix.guilds.cache.get(zxayar.sunucuıd);
 await roleBackUp(guild,zxayar.sunucuıd)
 await channelBackUp(guild,zxayar.sunucuıd)
     }
-}, 60000)/// 1 SAAT
+}, 60000)/// 10 DAKİKA ( SUNUCUNUZDA ROL FAZLA İSE KESİNLİKLE ALTINA İNDİRMEYİN 
 //600000 * 6 = 1 saat
 
 
