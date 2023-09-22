@@ -46,7 +46,7 @@ const zennix = global.client = new Client({
     selfDeaf:true,selfMute:true
               });
             })
-/*/  BOT SES BENCE AÇMAYIN
+/*/ //  BOT SES BENCE AÇMAYIN
 
 const webHook = new WebhookClient({ url: zxayar.webhookurl });
 async function kanalsend(message, entry) {
